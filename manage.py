@@ -9,9 +9,17 @@ manager = Manager(app)
 moment = Moment(app)
 db = SQLAlchemy(app)
 
+class User():
+    __tablename__ = 'users'
+    id = db.Column(db.Integer,primary_key=True)
+    name = db.Column(db.String(20))
+    password = db.Column(db.Integer)
+
 @app.route('/')
 def index():
-    return render_template('base.html')
+    return render_template('index.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
     <title>落木千山</title>
@@ -7,16 +7,38 @@
           href="{{ url_for('static',filename='image/kitty.ico') }}">
     <link rel="stylesheet" type="text/css"
           href="{{ url_for('static',filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static',filename='css/mycss.css') }}">
 </head>
 <body>
-<div class="container ">
-    <div class="navbar"></div>
-</div>
-<div class="col-xs-2"><></div>
-<div class="container">
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="#">文章</a></li>
+                    <li><a href="#">关于</a> </li>
+                </ul>
+            </div>
+            <div class="col-lg-2"></div>
 
+        </nav>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">a</div>
+        <div class="col-md-6">a</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">a</div>
+        <div class="col-lg-8">a</div>
+        <div class="col-lg-2">a</div>
+    </div>
 </div>
-<h1>TEST</h1>
-<a class="btn btn-default" href="#" role="button">Link</a>
+<script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
 </body>
 </html>
